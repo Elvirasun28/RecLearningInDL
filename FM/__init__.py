@@ -112,29 +112,28 @@ l2_norm = (tf.reduce_sum(
     )
 ))
 
-error = tf.reduce_sum(tf.square(tf.subtract(y,y_hat)))
+error = tf.reduce_mean(tf.square(y-y_hat))
 loss = tf.add(error, l2_norm)
 
 ''' Optimization '''
-optimizer = tf.train.GradientDescentOptimizer(learning_rate=0.01).minimize(loss)
+train_op = tf.train.GradientDescentOptimizer(learning_rate=0.01).minimize(loss)
 
 ''' Preparing Batches '''
-def batcher(X_, y_=None, batch_size= 1):
-    n_samples= X_.shape[0]
+def batcher(X_, y_=None, batch_size=-1):
+    n_samples = X_.shape[0]
 
-    if batch_size == 1:
+    if batch_size == -1:
         batch_size = n_samples
     if batch_size < 1:
-        raise ValueError('Parameters batch_size = {} is unsupported'.format(batch_size))
+       raise ValueError('Parameter batch_size={} is unsupported'.format(batch_size))
 
-    for i in range(0, n_samples,batch_size):
-        upper_bound = min(i+batch_size,n_samples)
+    for i in range(0, n_samples, batch_size):
+        upper_bound = min(i + batch_size, n_samples)
         ret_x = X_[i:upper_bound]
         ret_y = None
         if y_ is not None:
-            ret_y = y_[i:i+batch_size]
-            yield (ret_x,ret_y)
-
+            ret_y = y_[i:i + batch_size]
+            yield (ret_x, ret_y)
 
 ''' lanching tensorflow graph and training the model '''
 epochs = 10
@@ -146,13 +145,14 @@ sess = tf.Session()
 
 sess.run(init)
 
-for epoch in tqdm(range(epochs),unit='epoch'):
+for epoch in range(epochs):
     perm = np.random.permutation(X_train.shape[0])
     # iterate over batches
     for bX, bY in batcher(X_train[perm],y_train[perm],batch_size):
-        sess.run(optimizer,feed_dict={X:bX.reshape(-1,p),
+        _,t = sess.run([train_op,loss],feed_dict={X:bX.reshape(-1,p),
                                       y:bY.reshape(-1,1)}
                  )
+        print(t)
 
 
 ''' Evaluating the model '''
@@ -163,6 +163,8 @@ for bX,bY in batcher(X_test, y_test):
     }))
 RMSE = np.sqrt(np.array(errors)).mean()
 print(RMSE)
+
+sess.close()
 
 
 
