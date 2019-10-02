@@ -8,7 +8,7 @@ input_x_size = 20
 field_size = 2
 vector_dimension = 3
 total_plan_train_steps  = 1000
-batch_size = 1
+batch_size = 500
 all_data_size = 1000
 lr = 0.01
 MODEL_SAVE_PATH = 'FFM\logs\TFModel'
@@ -67,6 +67,23 @@ def inference(input_x, input_x_field, zeroWeights, oneDimWeights, thirdWeight):
 
     return tf.add(firstTwoValue,thirdValue)
 
+''' Preparing Batches '''
+def batcher(X_, y_=None, batch_size=-1):
+    n_samples = X_.shape[0]
+
+    if batch_size == -1:
+        batch_size = n_samples
+    if batch_size < 1:
+       raise ValueError('Parameter batch_size={} is unsupported'.format(batch_size))
+
+    for i in range(0, n_samples, batch_size):
+        upper_bound = min(i + batch_size, n_samples)
+        ret_x = X_[i:upper_bound]
+        ret_y = None
+        if y_ is not None:
+            ret_y = y_[i:i + batch_size]
+            yield (ret_x, ret_y)
+
 def gen_data():
     labels = [1,-1]
     y = [np.random.choice(labels,1)[0] for _ in range(all_data_size)]
@@ -81,8 +98,8 @@ if __name__=='__main__':
     trainx, trainy, trainx_field = gen_data()
 
     ## initialize the inputs
-    input_x = tf.placeholder(tf.float32,[input_x_size,])
-    input_y = tf.placeholder(tf.float32)
+    input_x = tf.placeholder(tf.float32,[input_x_size,None])
+    input_y = tf.placeholder(tf.float32,[1,None])
 
     lambda_w = tf.constant(0.001, name='lambda_w')
     lambda_v = tf.constant(0.001, name='lambda_v')
@@ -121,13 +138,13 @@ if __name__=='__main__':
                 predict_loss,_, steps = sess.run([loss,train_step, global_step],
                                                feed_dict={input_x: input_x_batch, input_y: input_y_batch})
 
-                print("After {step} training step(s), loss on training batch is {predict_loss} "
+                print("After  {step} training   step(s)   ,   loss    on    training    batch   is  {predict_loss} "
                       .format(step=steps, predict_loss=predict_loss))
 
                 saver.save(sess, os.path.join(MODEL_SAVE_PATH, MODEL_NAME), global_step=steps)
                 writer = tf.summary.FileWriter(os.path.join(MODEL_SAVE_PATH, MODEL_NAME), tf.get_default_graph())
                 writer.close()
-            tf.assign(global_step,tf.add(global_step,1))
+
 
 
 
