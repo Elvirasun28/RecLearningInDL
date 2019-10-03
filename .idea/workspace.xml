@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c468c801-dd41-4151-9aca-defd5ecec99b" name="Default" comment="">
+    <list default="true" id="c468c801-dd41-4151-9aca-defd5ecec99b" name="Default" comment="updated by SX">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FFM/v2/FFM_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/FFM/v2/FFM_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FFM/v2/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/FFM/v2/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FFM/v2/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/FFM/v2/util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FFM/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/FFM/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,7 +27,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FFM/v2/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="279">
@@ -37,6 +35,18 @@
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/FFM/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="200">
+                <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -74,7 +84,6 @@
       <list>
         <option value="$PROJECT_DIR$/FM/README.md" />
         <option value="$PROJECT_DIR$/tensorboard_intro/__init__.py" />
-        <option value="$PROJECT_DIR$/FFM/README.md" />
         <option value="$PROJECT_DIR$/FM/__init__.py" />
         <option value="$PROJECT_DIR$/gradientDescent.md" />
         <option value="$PROJECT_DIR$/FM/FM.py" />
@@ -84,6 +93,7 @@
         <option value="$PROJECT_DIR$/FFM/v2/FFM_2.py" />
         <option value="$PROJECT_DIR$/FFM/v2/util.py" />
         <option value="$PROJECT_DIR$/FFM/v2/__init__.py" />
+        <option value="$PROJECT_DIR$/FFM/README.md" />
       </list>
     </option>
   </component>
@@ -196,18 +206,32 @@
       <option name="project" value="LOCAL" />
       <updated>1570022762264</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="updated by SX">
+      <created>1570068766740</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1570068766740</updated>
+    </task>
+    <task id="LOCAL-00006" summary="updated by SX">
+      <created>1570069620876</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1570069620876</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="878" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14127605" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14127605" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32941177" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="7" visible="true" weight="0.34379086" />
+      <window_info anchor="bottom" id="Python Console" order="7" visible="true" weight="0.34379086" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="8" />
@@ -451,7 +475,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gradientDescent.md" />
-    <entry file="file://$PROJECT_DIR$/FFM/README.md" />
     <entry file="file://$PROJECT_DIR$/FM/FM.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
@@ -501,6 +524,16 @@
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FFM/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="200">
+            <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
