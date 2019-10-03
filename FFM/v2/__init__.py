@@ -1,8 +1,9 @@
-from FFM.v2.FFM_2 import FFM,Args
-from FFM.v2.util import get_batch,transfer_data
+from FFM.v2.FFM_2 import FFM
+from FFM.v2.util import get_batch,transfer_data,Args
 import pandas as pd
 import numpy as np
 import pickle
+import os
 import tensorflow as tf
 
 
@@ -54,4 +55,21 @@ with tf.Session() as sess:
                 batch_y = batch_y.reshape(args.batch_size,1)
                 loss,step = model.train(sess,batch_X,batch_y)
                 if j % 100 == 0:
+                    print('the times of training is %d, and the loss is %s' % (j, loss))
+                    model.save(sess, os.path.join(args.MODEL_SAVE_PATH, args.MODEL_NAME))
+
+    else:
+        model.restore(sess, os.path.join(args.MODEL_SAVE_PATH, args.MODEL_NAME))
+        for j in range(cnt):
+            data = get_batch(train_data,args.batch_size,j)
+            actual_batch_size = len(data)
+            batch_X = []
+            for k in range(actual_batch_size):
+                sample = data.iloc[k,:]
+                array = transfer_data(sample, fields_dict,all_len)
+                batch_X.append(array[:-2])
+            batch_X = np.array(batch_X)
+            result = model.predict(sess,batch_X)
+            print(result)
+
 

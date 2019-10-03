@@ -5,21 +5,6 @@ import os
 import pickle
 
 
-## params
-class Args(object):
-    k = 6 # number of latent factors
-    f = 24 # number of fields
-    p = 100 # number of features
-    learning_rate = 0.01
-    batch_size = 64
-    l2_reg_rate = 0.001
-    feature_2field = None
-    MODEL_SAVE_PATH = 'FFM\logs\TFModel'
-    MODEL_NAME = 'FFM'
-    is_training = True
-    epoch = 1
-
-
 class FFM(object):
     def __init__(self,args):
         self.k = args.k
@@ -58,7 +43,6 @@ class FFM(object):
             for i in range(self.p):
                 # 寻找没有match过的特征，也就是论文中的j = i+1开始
                 for j in range(i + 1, self.p):
-                    print('i:%s,j:%s' % (i, j))
                     # vifj
                     vifj = self.v[i, self.feature2field[j]]
                     # vjfi
