@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c468c801-dd41-4151-9aca-defd5ecec99b" name="Default" comment="updated by SX">
-      <change afterPath="$PROJECT_DIR$/multi_embedding/__init__.py" afterDir="false" />
+    <list default="true" id="c468c801-dd41-4151-9aca-defd5ecec99b" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/FNN/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DeepFM/v1/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2075">
-              <caret line="137" column="76" selection-start-line="137" selection-start-column="66" selection-end-line="137" selection-end-column="76" />
+            <state relative-caret-position="-775">
+              <caret line="92" column="13" lean-forward="true" selection-start-line="92" selection-start-column="13" selection-end-line="92" selection-end-column="13" />
               <folding>
                 <element signature="e#0#72#0" expanded="true" />
               </folding>
@@ -26,23 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/multi_embedding/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DeepFM/v2/__init__.py">
+        <entry file="file://$PROJECT_DIR$/FNN/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2429">
-              <caret line="379" column="41" selection-start-line="379" selection-start-column="41" selection-end-line="379" selection-end-column="41" />
-              <folding>
-                <element signature="e#207#225#0" expanded="true" />
-              </folding>
+            <state>
+              <caret column="12" selection-start-column="12" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -84,14 +72,15 @@
         <option value="$PROJECT_DIR$/DeepFM/v1/util.py" />
         <option value="$PROJECT_DIR$/DeepFM/v2/__init__.py" />
         <option value="$PROJECT_DIR$/multi_embedding/__init__.py" />
+        <option value="$PROJECT_DIR$/FNN/__init__.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
     <option name="width" value="1075" />
-    <option name="height" value="1038" />
+    <option name="height" value="1039" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -99,6 +88,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -109,17 +99,21 @@
             <path>
               <item name="RecLearning" type="b2602c69:ProjectViewProjectNode" />
               <item name="RecLearning" type="462c0819:PsiDirectoryNode" />
+              <item name="FNN" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RecLearning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RecLearning" type="462c0819:PsiDirectoryNode" />
               <item name="multi_embedding" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -199,23 +193,29 @@
       <option name="project" value="LOCAL" />
       <updated>1570069620876</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="updated by SX">
+      <created>1570277911278</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1570277911278</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.28292048" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15559895" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32941177" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="7" visible="true" weight="0.34379086" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.34379086" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -226,22 +226,22 @@
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28292048" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.28292048" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Python Console" order="7" visible="true" weight="0.34742403" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32941177" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32941177" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="7" visible="true" weight="0.34379086" />
     </layout-to-restore>
   </component>
   <component name="UnknownFeatures">
@@ -261,7 +261,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/FFM/FFM2/__init__.py" />
     <entry file="file://$PROJECT_DIR$/FFM/v1/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="614">
@@ -539,26 +538,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2429">
           <caret line="379" column="41" selection-start-line="379" selection-start-column="41" selection-end-line="379" selection-end-column="41" />
-          <folding>
-            <element signature="e#207#225#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DeepFM/v1/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2075">
-          <caret line="137" column="76" selection-start-line="137" selection-start-column="66" selection-end-line="137" selection-end-column="76" />
-          <folding>
-            <element signature="e#0#72#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/multi_embedding/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
+        <state relative-caret-position="-533">
           <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FNN/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeepFM/v1/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-775">
+          <caret line="92" column="13" lean-forward="true" selection-start-line="92" selection-start-column="13" selection-end-line="92" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#72#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
