@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c468c801-dd41-4151-9aca-defd5ecec99b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/PNN/PNN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FNN/FNN_PNN介绍.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FNN/FNN_PNN介绍.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FNN/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/FNN/__init__.py" afterDir="false" />
-    </list>
+    <list default="true" id="c468c801-dd41-4151-9aca-defd5ecec99b" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +15,7 @@
         <entry file="file://$PROJECT_DIR$/PNN/PNN.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="500">
-              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -67,12 +62,14 @@
         <option value="$PROJECT_DIR$/multi_embedding/__init__.py" />
         <option value="$PROJECT_DIR$/FNN/__init__.py" />
         <option value="$PROJECT_DIR$/PNN/PNN.py" />
+        <option value="$PROJECT_DIR$/PNN/README.md" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="862" />
-    <option name="y" value="22" />
+    <option name="x" value="457" />
+    <option name="y" value="138" />
     <option name="width" value="1075" />
     <option name="height" value="1039" />
   </component>
@@ -201,14 +198,21 @@
       <option name="project" value="LOCAL" />
       <updated>1570420689328</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="updated by SX">
+      <created>1570429238802</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1570429238802</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="690" y="18" width="860" height="831" extended-state="0" />
+    <frame x="366" y="111" width="860" height="831" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.2825059" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32941177" />
@@ -263,8 +267,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/FFM/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/FFM/FFM2/FFM_2.py" />
     <entry file="file://$PROJECT_DIR$/FFM/v2/util.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -563,10 +565,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PNN/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <caret column="4" lean-forward="true" selection-start-column="4" selection-end-column="4" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="75">
+            <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PNN/PNN.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
-          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
