@@ -1,4 +1,5 @@
 import numpy as np
+import time
 import tensorflow as tf
 from sklearn.metrics import roc_auc_score
 
@@ -140,6 +141,111 @@ class PNN():
 
     def _initialize_weights(self):
         weights = dict()
+
+        # embeddings
+        weights['feature_embeddings'] = tf.Variable(tf.random_normal(
+            [self.feature_size,self.embedding_size],0.0,0.01),name='feature_embeddings'
+        )
+        weights['feature-bias'] = tf.Variable(tf.random_normal([self.feature_size,1],0.0,0.01),name='feature-_bias')
+
+        # product-layers
+        if self.use_inner:
+            weights['product-quadratic-inner'] = tf.Variable(
+                tf.random_normal([self.deep_init_size,self.field_size],0.0,0.01))
+        else:
+            weights['product-quadratic-outer'] = tf.Variable(
+                tf.random_normal([self.deep_init_size,self.embedding_size,self.embedding_size],0.0,0.01)
+            )
+
+        weights['product-linear'] = tf.Variable(tf.random_normal([self.deep_init_size,self.field_size,self.embedding_size],0.0,0.01))
+        weights['product-bias'] = tf.Variable(tf.random_normal([self.deep_init_size,],0.0,0.01))
+        #deep layers
+        num_layers = len(self.deep_layers)
+        input_size = self.deep_init_size
+        glorots = np.sqrt(2.0 / (input_size + self.deep_layers[0]))
+
+        weights['layer_0'] = tf.Variable(
+            np.random.normal(loc=0,scale=glorots,size=(input_size,self.deep_layers[0])),dtype=tf.float32
+        )
+        weights['bias_0'] = tf.Variable(np.random.normal(loc=0,scale=glorots,size=(1,self.deep_layers[0])),dtype=tf.float32)
+
+        for i in range(1,num_layers):
+            glorot = np.sqrt(2.0 / (self.deep_layers[i - 1] + self.deep_layers[i]))
+            weights["layer_%d" % i] = tf.Variable(
+                np.random.normal(loc=0, scale=glorot, size=(self.deep_layers[i - 1], self.deep_layers[i])),
+                dtype=np.float32)  # layers[i-1] * layers[i]
+            weights["bias_%d" % i] = tf.Variable(
+                np.random.normal(loc=0, scale=glorot, size=(1, self.deep_layers[i])),
+                dtype=np.float32)  # 1 * layer[i]
+
+        glorot = np.sqrt(2.0 / (self.deep_layers[i - 1] + self.deep_layers[i]))
+        weights["layer_%d" % i] = tf.Variable(
+            np.random.normal(loc=0, scale=glorot, size=(self.deep_layers[i - 1], self.deep_layers[i])),
+            dtype=np.float32)  # layers[i-1] * layers[i]
+        weights["bias_%d" % i] = tf.Variable(
+            np.random.normal(loc=0, scale=glorot, size=(1, self.deep_layers[i])),
+            dtype=np.float32)  # 1 * layer[i]
+
+        return weights
+
+    def get_batch(self,Xi,Xv,y,batch_size, index):
+        start = index * batch_size
+        end = (index + 1) * batch_size
+        end = end if end <= len(y) else len(y)
+        return Xi[start:end],Xv[start:end],y[start:end]
+
+    # shuffle three list at the same time
+    def shuffle_in_unison_scary(self,a,b,c):
+        seed_state = np.random.get_state()
+        np.random.shuffle(a)
+        np.random.set_state(seed_state)
+        np.random.shuffle(b)
+        np.random.set_state(seed_state)
+        np.random.shuffle(c)
+
+    def predict(self, Xi,Xv,y):
+        feed_dict={
+            self.feat_index:Xi,
+            self.feat_value:Xv,
+            self.dropout_keep_deep:[1.0] * len(self.dropout_deep),
+            self.train_phase:True
+        }
+        loss = self.sess.run([self.loss],feed_dict=feed_dict)
+
+        return loss
+
+    def fit_on_batch(self,Xi,Xv,y):
+        feed_dict = {self.feat_index: Xi,
+                     self.feat_value: Xv,
+                     self.label: y,
+                     self.dropout_keep_deep: self.dropout_dep,
+                     self.train_phase: True}
+
+        loss, opt = self.sess.run([self.loss, self.optimizer], feed_dict=feed_dict)
+        return loss
+
+    def fit(self, Xi_train, Xv_train, y_train,
+            Xi_valid=None, Xv_valid=None, y_valid=None,
+            early_stopping=False, refit=False):
+        has_valid = Xv_valid is not None
+        for epoch in range(self.epoch):
+            t1 = time()
+            self.shuffle_in_unison_scary(Xi_train,Xv_train,y_train)
+            total_batch = int(len(y_train) / self.batch_size)
+            for i in range(total_batch):
+                Xi_batch,Xv_batch,y_batch = self.get_batch(Xi_train,Xv_train,y_train,self.batch_size,i)
+                self.fit_on_batch(Xi_batch,Xv_batch,y_batch)
+
+            if has_valid:
+                y_valid = np.array(y_valid).reshape(-1,1)
+                loss = self.predict(Xi_valid,Xv_valid,y_valid)
+                print("epoch", epoch, "loss", loss)
+
+
+
+
+
+
 
 
 

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c468c801-dd41-4151-9aca-defd5ecec99b" name="Default" comment="" />
+    <list default="true" id="c468c801-dd41-4151-9aca-defd5ecec99b" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PNN/PNN.py" beforeDir="false" afterPath="$PROJECT_DIR$/PNN/PNN.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,8 +17,8 @@
       <file leaf-file-name="PNN.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PNN/PNN.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="506">
+              <caret line="241" column="22" selection-start-line="241" selection-start-column="22" selection-end-line="241" selection-end-column="22" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -61,16 +64,16 @@
         <option value="$PROJECT_DIR$/DeepFM/v2/__init__.py" />
         <option value="$PROJECT_DIR$/multi_embedding/__init__.py" />
         <option value="$PROJECT_DIR$/FNN/__init__.py" />
-        <option value="$PROJECT_DIR$/PNN/PNN.py" />
         <option value="$PROJECT_DIR$/PNN/README.md" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/PNN/PNN.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="457" />
-    <option name="y" value="138" />
-    <option name="width" value="1075" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="987" />
     <option name="height" value="1039" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -205,11 +208,18 @@
       <option name="project" value="LOCAL" />
       <updated>1570429238802</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="updated by SX">
+      <created>1571030746015</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1571030746015</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="366" y="111" width="860" height="831" extended-state="0" />
+    <frame x="750" y="18" width="789" height="831" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.0" />
@@ -587,8 +597,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PNN/PNN.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="506">
+          <caret line="241" column="22" selection-start-line="241" selection-start-column="22" selection-end-line="241" selection-end-column="22" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
