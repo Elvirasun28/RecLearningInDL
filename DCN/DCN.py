@@ -5,7 +5,6 @@ from time import time
 from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.metrics import roc_auc_score
 
-
 class DCN(BaseEstimator, TransformerMixin):
 
     def __init__(self, cate_feature_size, field_size, numeric_feature_size,
